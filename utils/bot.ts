@@ -31,7 +31,7 @@ bot.start(async (ctx) => {
 bot.on("text", async (ctx) => {
   try {
     const message = ctx.message.text;
-    const replay_massage = (await OSA.chat(message)) as string;
+    const replay_massage = (await OSA.chat(`${message} fix the grammar in formal way to write the word`)) as string;
     await ctx.reply(replay_massage);
   } catch (error) {
     await ctx.reply("❌ Failed to send message. Please try again.");
